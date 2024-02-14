@@ -13,7 +13,10 @@ ul {
 
 body {
     overflow-x: hidden;
-    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+
+    max-width: 100vw !important;
 }
 
 header #index {
@@ -27,7 +30,7 @@ a {
 }
 
 nav {
-    width: 100%;
+    width: 100vw;
     box-shadow: 0px 0px 9px 4px rgb(112, 112, 112);
     background-color: white;
     display: flex;
@@ -49,13 +52,14 @@ nav .nav-top {
     flex-wrap: wrap;
 }
 
-nav .nav-top .nav-logo { 
+nav .nav-top .nav-logo {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     margin: 0px 0px;
-    
- }
+
+}
+
 nav .nav-top .nav-logo img {
     width: 110px;
     height: 80px;
@@ -123,6 +127,7 @@ svg {
 .nav-top .nav-icons {
     display: flex;
     flex-direction: row;
+    padding: 0px 20px;
 }
 
 .nav-top .nav-icons>a {
@@ -229,29 +234,37 @@ header>section {
 }
 
 .banner {
-    max-height: 600px;
-    display: grid;
-    gap: 0px 10px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-
+    display: flex;
+    gap: 25px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
-.banner>div {
-    overflow: hidden;
-    margin: 20px 30px;
-    gap: 20px;
+.banner img {
+    width: 100%;
+    height: 100%;
     border-radius: 20px;
 }
 
-.banner>div>a>img {
-    width: 100%;
-    display: block;
-    height: 100%;
+.banner .banner-item1 {
+    margin-top: 11%;
+    width: auto;
+    padding: 2%;
 }
 
-.banner-item1 {
-    grid-area: 1/1/3/4;
+.banner .ban {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* margin: 0px 10px 30px 10px; */
+}
+
+.banner .ban img {
+    width: auto;
+    height: 150px;
+    border-radius: 20px;
 }
 
 
@@ -603,14 +616,15 @@ section.popular-cards .popular-items img {
 
 /* start footer */
 
-footer #logo-adress {
+footer #logo-address {
     border-top: 2px solid rgb(171, 171, 171);
-    padding: 20px 0px;
+    padding: 25px 0px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 footer {
@@ -623,7 +637,7 @@ footer :last-child {
     border-right: none
 }
 
-footer #logo-adress ul {
+footer #logo-address ul {
     padding: 10px;
     width: auto;
     padding: 0px 40px;
@@ -650,11 +664,11 @@ footer ul li {
     margin-top: 15px;
 }
 
-footer #logo-adress>.bx {
+footer #logo-address>.bx {
     padding: 0px 20px;
 }
 
-footer #logo-adress .exo-logo {
+footer #logo-address .exo-logo {
     padding: 0px 20px;
     margin: 0px 30px;
 }
@@ -702,15 +716,17 @@ footer .footer-right div ul>li ul {
     position: absolute;
     opacity: 0;
     visibility: hidden;
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
+    background-color: rgb(245, 245, 245);
     color: var(--navtxt-color);
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     margin: 0;
     gap: 0;
     transition: all .2s;
+    transform: translateX(15%);
 }
 
 footer .footer-right div ul>li:hover ul {
@@ -752,6 +768,18 @@ footer .copyright {
     text-align: center;
 }
 
+.footer-menu-items-items {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    max-width: 200px;
+    border-radius: 20px;
+}
+
+.footer-menu-items-items li {
+    padding: 0px 10px;
+}
+
 
 
 /* about page */
@@ -788,11 +816,18 @@ main > #about .about-exo-text .photo-mouse-pad{
 
 
 /* Extra small devices (phones, 600px and down) */
+
+
+
 @media only screen and (max-width: 600px) {
 
     body {
-        width: 100%;
         overflow-x: hidden;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+
+        max-width: 100vw !important;
     }
 
     nav {
@@ -801,7 +836,7 @@ main > #about .about-exo-text .photo-mouse-pad{
         justify-content: flex-end !important;
         align-items: flex-end !important;
         right: 0px;
-        width: 100vw;
+        width: 100vw !important;
     }
 
     nav .nav-bottum div ul>li ul {
@@ -841,7 +876,14 @@ main > #about .about-exo-text .photo-mouse-pad{
         align-items: center !important;
     }
 
-    .banner {
+
+    .banner .ban {
+        height: 100px;
+        width: auto;
+        margin: 15px;
+    }
+
+    /* .banner {
         width: 100vw;
         display: flex;
         flex-direction: column;
@@ -860,9 +902,8 @@ main > #about .about-exo-text .photo-mouse-pad{
 
     .banner>div>a>img {
         width: 100%;
-        /* display: block; */
         height: 100%;
-    }
+    } */
 
     .banner2 {
         display: flex;
@@ -932,25 +973,25 @@ main > #about .about-exo-text .photo-mouse-pad{
         margin: 30px;
     }
 
-    #logo-adress {
+    #logo-address {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    #logo-adress .exo-logo {
+    #logo-address .exo-logo {
         display: flex;
         flex-direction: column !important;
         justify-content: center !important;
         margin-bottom: 50px !important;
     }
 
-    #logo-adress ul {
+    #logo-address ul {
         margin-bottom: 50px !important;
     }
 
-    footer #logo-adress .namad-logo {
+    footer #logo-address .namad-logo {
         margin-right: 25%;
         padding: 50px 20px;
         border: 2px solid rgb(175, 175, 175);
@@ -969,15 +1010,42 @@ main > #about .about-exo-text .photo-mouse-pad{
         height: 150px;
         margin: 30px;
     }
+
     body {
         overflow-x: hidden;
-        overflow-y: auto;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+
+        max-width: 100vw !important;
+    }
+}
+
+@media only screen and (max-width: 526px) {
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center !important;
+        align-items: center !important;
+        width: auto !important;
+        min-width: 100vw !;
+    }
+
+    .banner .banner-item1{
+        height: auto !important; 
+        width: auto;
+        padding: 2%;
+    }
+    .banner .ban{
+        height: auto !important; 
+        width: auto;
     }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    footer #logo-adress .namad-logo {
+    footer #logo-address .namad-logo {
         /* margin-right: 25%; */
         /* padding: 50px 20px; */
         border: 2px solid rgb(175, 175, 175);
@@ -1008,7 +1076,7 @@ main > #about .about-exo-text .photo-mouse-pad{
         margin: 20px 70px;
     }
 
-    footer #logo-adress .namad-logo {
+    footer #logo-address .namad-logo {
         padding: 0px 20px;
         margin: 0px 250px 0px 20px;
         border: 2px solid rgb(175, 175, 175);
@@ -1018,9 +1086,5 @@ main > #about .about-exo-text .photo-mouse-pad{
     nav {
         position: fixed;
         z-index: 1000;
-    }
-
-    .banner {
-        margin-top: 11%;
     }
 }
