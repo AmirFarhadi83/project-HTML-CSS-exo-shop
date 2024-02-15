@@ -275,7 +275,6 @@ section #offer {
     display: flex;
     flex-direction: column;
     gap: 20px;
-
 }
 
 #offer .offer-name {
@@ -285,6 +284,7 @@ section #offer {
     flex-direction: column;
     align-items: flex-start;
     margin-right: 40px;
+    margin-top: 22px;
 }
 
 #offer .all {
@@ -296,7 +296,6 @@ section #offer {
 #offer .all>a {
     color: rgb(7, 201, 7);
     font-size: 24px;
-
     padding-left: 40px;
 }
 
@@ -307,11 +306,26 @@ section.offer-cards {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 45px;
     margin: 30px 0px;
+    padding: 5px;
     /* margin-right: 35px; */
     /* padding: 20px; */
     /* margin: 0px 70px; */
+}
+
+
+
+#offer .offer-cards .offer-items {
+    width: 230px;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid rgb(137, 136, 136);
+    border-radius: 10px;
+    position: relative;
+    padding: 5px;
 }
 
 section.offer-cards .offer-items .img {
@@ -327,19 +341,9 @@ section.offer-cards .offer-items img {
     height: 100%;
 }
 
-#offer .offer-cards .offer-items {
-    width: 230px;
-    height: 420px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: 1px solid rgb(137, 136, 136);
-    border-radius: 10px;
-    position: relative;
-}
-
 #offer .offer-cards .offer-items:hover {
     border: 2px solid rgb(7, 201, 7);
+    padding: 4.2px;
 }
 
 #offer .offer-cards .offer-items .special-offer {
@@ -354,6 +358,7 @@ section.offer-cards .offer-items img {
     border-radius: 3px;
     color: rgb(7, 201, 7);
     text-align: center;
+    border-radius: 10px;
 }
 
 #offer .offer-cards .offer-items .offer-time {
@@ -420,6 +425,17 @@ section.offer-cards .offer-items img {
 
 /* end offer */
 /* start proposal */
+#proposal .all {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#proposal .all>a {
+    color: rgb(7, 201, 7);
+    font-size: 24px;
+    padding-left: 40px;
+}
 
 #proposal .proposal-name {
     color: var(--navtxt-color);
@@ -437,12 +453,26 @@ section.proposal-cards {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 45px;
     margin: 30px 0px;
-
+    padding: 5px;
     /* margin-right: 35px; */
     /* padding: 20px; */
     /* margin: 0px 70px; */
+}
+
+
+
+#proposal .proposal-cards .proposal-items {
+    width: 230px;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid rgb(137, 136, 136);
+    border-radius: 10px;
+    position: relative;
+    padding: 5px;
 }
 
 section.proposal-cards .proposal-items .img {
@@ -458,19 +488,9 @@ section.proposal-cards .proposal-items img {
     height: 100%;
 }
 
-#proposal .proposal-cards .proposal-items {
-    width: 230px;
-    height: 420px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: 1px solid rgb(137, 136, 136);
-    border-radius: 10px;
-    position: relative;
-}
-
 #proposal .proposal-cards .proposal-items:hover {
     border: 2px solid rgb(7, 201, 7);
+    padding: 4.2px;
 }
 
 #proposal .proposal-cards .proposal-items>h4 {
